@@ -27,6 +27,7 @@
 		4FCF3E061C529A4100DB7FE8 /* LeapObjectiveC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF3E051C529A4100DB7FE8 /* LeapObjectiveC.mm */; };
 		4FCF3E0A1C529B9300DB7FE8 /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FCF3E091C529B9300DB7FE8 /* libLeap.dylib */; };
 		4FCF3E0D1C52A28900DB7FE8 /* libLeap.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4FCF3E091C529B9300DB7FE8 /* libLeap.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		E27068566C41165660EEE2E5 /* libPods-GestureCatcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD451F6C3F31DFAE0AB5E134 /* libPods-GestureCatcher.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		145EC3A2FA673200A568438D /* Pods-GestureCatcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestureCatcher.release.xcconfig"; path = "Pods/Target Support Files/Pods-GestureCatcher/Pods-GestureCatcher.release.xcconfig"; sourceTree = "<group>"; };
 		4F78B66A1C89CCDB0014AF2F /* LMSGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSGesture.h; sourceTree = "<group>"; };
 		4F78B66B1C89CCDB0014AF2F /* LMSGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSGesture.m; sourceTree = "<group>"; };
 		4F78B66D1C89CF300014AF2F /* LMSGestureTypeA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSGestureTypeA.h; sourceTree = "<group>"; };
@@ -97,6 +99,8 @@
 		4FCF3E041C529A4100DB7FE8 /* LeapObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeapObjectiveC.h; path = Vendor/LeapMotion/include/LeapObjectiveC.h; sourceTree = SOURCE_ROOT; };
 		4FCF3E051C529A4100DB7FE8 /* LeapObjectiveC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LeapObjectiveC.mm; path = Vendor/LeapMotion/include/LeapObjectiveC.mm; sourceTree = SOURCE_ROOT; };
 		4FCF3E091C529B9300DB7FE8 /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libLeap.dylib; path = Vendor/LeapMotion/libLeap.dylib; sourceTree = "<group>"; };
+		AD451F6C3F31DFAE0AB5E134 /* libPods-GestureCatcher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GestureCatcher.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFEB5EDE774882FDEDE08476 /* Pods-GestureCatcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestureCatcher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GestureCatcher/Pods-GestureCatcher.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 				4FCF3DFA1C5268D700DB7FE8 /* Foundation.framework in Frameworks */,
 				4FCF3DF81C5268CE00DB7FE8 /* AppKit.framework in Frameworks */,
 				4FCF3DF61C5268C500DB7FE8 /* Cocoa.framework in Frameworks */,
+				E27068566C41165660EEE2E5 /* libPods-GestureCatcher.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +133,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		499CD61B8288ABA09695E472 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFEB5EDE774882FDEDE08476 /* Pods-GestureCatcher.debug.xcconfig */,
+				145EC3A2FA673200A568438D /* Pods-GestureCatcher.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4FCF3DB71C52688900DB7FE8 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +150,7 @@
 				4FCF3DE41C52688900DB7FE8 /* GestureCatcherUITests */,
 				4FCF3DFB1C5268F100DB7FE8 /* Frameworks */,
 				4FCF3DC11C52688900DB7FE8 /* Products */,
+				499CD61B8288ABA09695E472 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +227,7 @@
 				4FCF3DF91C5268D700DB7FE8 /* Foundation.framework */,
 				4FCF3DF71C5268CE00DB7FE8 /* AppKit.framework */,
 				4FCF3DF51C5268C500DB7FE8 /* Cocoa.framework */,
+				AD451F6C3F31DFAE0AB5E134 /* libPods-GestureCatcher.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -234,10 +250,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FCF3DEA1C52688900DB7FE8 /* Build configuration list for PBXNativeTarget "GestureCatcher" */;
 			buildPhases = (
+				12DBEF059CD9DA65FE5E28E3 /* Check Pods Manifest.lock */,
 				4FCF3DBC1C52688900DB7FE8 /* Sources */,
 				4FCF3DBD1C52688900DB7FE8 /* Frameworks */,
 				4FCF3DBE1C52688900DB7FE8 /* Resources */,
 				4FCF3E0C1C52A27D00DB7FE8 /* CopyFiles */,
+				49D04F09435BED39BBDFA495 /* Embed Pods Frameworks */,
+				0E01BE0E8CC13E63EC0C9D37 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -351,6 +370,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E01BE0E8CC13E63EC0C9D37 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GestureCatcher/Pods-GestureCatcher-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12DBEF059CD9DA65FE5E28E3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		49D04F09435BED39BBDFA495 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GestureCatcher/Pods-GestureCatcher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4FCF3DBC1C52688900DB7FE8 /* Sources */ = {
@@ -495,11 +562,11 @@
 		};
 		4FCF3DEB1C52688900DB7FE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFEB5EDE774882FDEDE08476 /* Pods-GestureCatcher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = GestureCatcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -514,11 +581,11 @@
 		};
 		4FCF3DEC1C52688900DB7FE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 145EC3A2FA673200A568438D /* Pods-GestureCatcher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = GestureCatcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
