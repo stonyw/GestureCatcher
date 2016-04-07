@@ -7,9 +7,24 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "MotionController.h"
+#import "LMSGesture.h"
 
-@interface ViewController : NSViewController
+@interface ViewController : NSViewController <LeapDelegate, LMSGestureDelegate>  {
+    NSMutableArray *_gestureFiredList;
+}
 
+@property (nonatomic, strong) MotionController   *leapMotion;
+
+@property (unsafe_unretained) IBOutlet NSTextView *textView;
+
+- (IBAction)clickStart:(id)sender;
+
+- (IBAction)clickStop:(id)sender;
+
+
+#pragma mark -- LMSGestureDelegate
+- (void)onGestureEvent:(LeapController *)controller withGesture:(LMSGesture*)gesture;
 
 @end
 

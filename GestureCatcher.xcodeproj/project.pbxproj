@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F78B66C1C89CCDB0014AF2F /* LMSGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F78B66B1C89CCDB0014AF2F /* LMSGesture.m */; };
+		4F78B66F1C89CF300014AF2F /* LMSGestureTypeA.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F78B66E1C89CF300014AF2F /* LMSGestureTypeA.m */; };
+		4F78B6721C89D0450014AF2F /* LMSConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F78B6711C89D0450014AF2F /* LMSConst.m */; };
+		4F78B6751C8A2D300014AF2F /* LMSGestureTypeB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F78B6741C8A2D300014AF2F /* LMSGestureTypeB.m */; };
+		4F78B6781C8A3B7D0014AF2F /* LMSGestureTypeC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F78B6771C8A3B7D0014AF2F /* LMSGestureTypeC.m */; };
+		4F78B67B1C8A3B8A0014AF2F /* LMSGestureTypeD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F78B67A1C8A3B8A0014AF2F /* LMSGestureTypeD.m */; };
 		4FCF3DC51C52688900DB7FE8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF3DC41C52688900DB7FE8 /* AppDelegate.m */; };
 		4FCF3DC81C52688900DB7FE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF3DC71C52688900DB7FE8 /* main.m */; };
 		4FCF3DCB1C52688900DB7FE8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF3DCA1C52688900DB7FE8 /* ViewController.m */; };
@@ -14,6 +20,13 @@
 		4FCF3DD01C52688900DB7FE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FCF3DCE1C52688900DB7FE8 /* Main.storyboard */; };
 		4FCF3DDB1C52688900DB7FE8 /* GestureCatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF3DDA1C52688900DB7FE8 /* GestureCatcherTests.m */; };
 		4FCF3DE61C52688900DB7FE8 /* GestureCatcherUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF3DE51C52688900DB7FE8 /* GestureCatcherUITests.m */; };
+		4FCF3DF61C5268C500DB7FE8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FCF3DF51C5268C500DB7FE8 /* Cocoa.framework */; };
+		4FCF3DF81C5268CE00DB7FE8 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FCF3DF71C5268CE00DB7FE8 /* AppKit.framework */; };
+		4FCF3DFA1C5268D700DB7FE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FCF3DF91C5268D700DB7FE8 /* Foundation.framework */; };
+		4FCF3E001C52696F00DB7FE8 /* MotionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF3DFF1C52696F00DB7FE8 /* MotionController.m */; };
+		4FCF3E061C529A4100DB7FE8 /* LeapObjectiveC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF3E051C529A4100DB7FE8 /* LeapObjectiveC.mm */; };
+		4FCF3E0A1C529B9300DB7FE8 /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FCF3E091C529B9300DB7FE8 /* libLeap.dylib */; };
+		4FCF3E0D1C52A28900DB7FE8 /* libLeap.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4FCF3E091C529B9300DB7FE8 /* libLeap.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +46,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4FCF3E0C1C52A27D00DB7FE8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				4FCF3E0D1C52A28900DB7FE8 /* libLeap.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4F78B66A1C89CCDB0014AF2F /* LMSGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSGesture.h; sourceTree = "<group>"; };
+		4F78B66B1C89CCDB0014AF2F /* LMSGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSGesture.m; sourceTree = "<group>"; };
+		4F78B66D1C89CF300014AF2F /* LMSGestureTypeA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSGestureTypeA.h; sourceTree = "<group>"; };
+		4F78B66E1C89CF300014AF2F /* LMSGestureTypeA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSGestureTypeA.m; sourceTree = "<group>"; };
+		4F78B6701C89D0450014AF2F /* LMSConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSConst.h; sourceTree = "<group>"; };
+		4F78B6711C89D0450014AF2F /* LMSConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSConst.m; sourceTree = "<group>"; };
+		4F78B6731C8A2D300014AF2F /* LMSGestureTypeB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSGestureTypeB.h; sourceTree = "<group>"; };
+		4F78B6741C8A2D300014AF2F /* LMSGestureTypeB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSGestureTypeB.m; sourceTree = "<group>"; };
+		4F78B6761C8A3B7D0014AF2F /* LMSGestureTypeC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSGestureTypeC.h; sourceTree = "<group>"; };
+		4F78B6771C8A3B7D0014AF2F /* LMSGestureTypeC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSGestureTypeC.m; sourceTree = "<group>"; };
+		4F78B6791C8A3B8A0014AF2F /* LMSGestureTypeD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSGestureTypeD.h; sourceTree = "<group>"; };
+		4F78B67A1C8A3B8A0014AF2F /* LMSGestureTypeD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSGestureTypeD.m; sourceTree = "<group>"; };
 		4FCF3DC01C52688900DB7FE8 /* GestureCatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureCatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FCF3DC31C52688900DB7FE8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4FCF3DC41C52688900DB7FE8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -49,6 +87,16 @@
 		4FCF3DE11C52688900DB7FE8 /* GestureCatcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureCatcherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FCF3DE51C52688900DB7FE8 /* GestureCatcherUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureCatcherUITests.m; sourceTree = "<group>"; };
 		4FCF3DE71C52688900DB7FE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FCF3DF51C5268C500DB7FE8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4FCF3DF71C5268CE00DB7FE8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4FCF3DF91C5268D700DB7FE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4FCF3DFE1C52696F00DB7FE8 /* MotionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionController.h; sourceTree = "<group>"; };
+		4FCF3DFF1C52696F00DB7FE8 /* MotionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionController.m; sourceTree = "<group>"; };
+		4FCF3E021C529A4100DB7FE8 /* Leap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Leap.h; path = Vendor/LeapMotion/include/Leap.h; sourceTree = SOURCE_ROOT; };
+		4FCF3E031C529A4100DB7FE8 /* LeapMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeapMath.h; path = Vendor/LeapMotion/include/LeapMath.h; sourceTree = SOURCE_ROOT; };
+		4FCF3E041C529A4100DB7FE8 /* LeapObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeapObjectiveC.h; path = Vendor/LeapMotion/include/LeapObjectiveC.h; sourceTree = SOURCE_ROOT; };
+		4FCF3E051C529A4100DB7FE8 /* LeapObjectiveC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LeapObjectiveC.mm; path = Vendor/LeapMotion/include/LeapObjectiveC.mm; sourceTree = SOURCE_ROOT; };
+		4FCF3E091C529B9300DB7FE8 /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libLeap.dylib; path = Vendor/LeapMotion/libLeap.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +104,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FCF3E0A1C529B9300DB7FE8 /* libLeap.dylib in Frameworks */,
+				4FCF3DFA1C5268D700DB7FE8 /* Foundation.framework in Frameworks */,
+				4FCF3DF81C5268CE00DB7FE8 /* AppKit.framework in Frameworks */,
+				4FCF3DF61C5268C500DB7FE8 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +134,7 @@
 				4FCF3DC21C52688900DB7FE8 /* GestureCatcher */,
 				4FCF3DD91C52688900DB7FE8 /* GestureCatcherTests */,
 				4FCF3DE41C52688900DB7FE8 /* GestureCatcherUITests */,
+				4FCF3DFB1C5268F100DB7FE8 /* Frameworks */,
 				4FCF3DC11C52688900DB7FE8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,6 +152,7 @@
 		4FCF3DC21C52688900DB7FE8 /* GestureCatcher */ = {
 			isa = PBXGroup;
 			children = (
+				4FCF3E011C529A2600DB7FE8 /* LeapMotion */,
 				4FCF3DC31C52688900DB7FE8 /* AppDelegate.h */,
 				4FCF3DC41C52688900DB7FE8 /* AppDelegate.m */,
 				4FCF3DC91C52688900DB7FE8 /* ViewController.h */,
@@ -107,6 +161,20 @@
 				4FCF3DCE1C52688900DB7FE8 /* Main.storyboard */,
 				4FCF3DD11C52688900DB7FE8 /* Info.plist */,
 				4FCF3DC61C52688900DB7FE8 /* Supporting Files */,
+				4FCF3DFE1C52696F00DB7FE8 /* MotionController.h */,
+				4FCF3DFF1C52696F00DB7FE8 /* MotionController.m */,
+				4F78B66A1C89CCDB0014AF2F /* LMSGesture.h */,
+				4F78B66B1C89CCDB0014AF2F /* LMSGesture.m */,
+				4F78B66D1C89CF300014AF2F /* LMSGestureTypeA.h */,
+				4F78B66E1C89CF300014AF2F /* LMSGestureTypeA.m */,
+				4F78B6701C89D0450014AF2F /* LMSConst.h */,
+				4F78B6711C89D0450014AF2F /* LMSConst.m */,
+				4F78B6731C8A2D300014AF2F /* LMSGestureTypeB.h */,
+				4F78B6741C8A2D300014AF2F /* LMSGestureTypeB.m */,
+				4F78B6761C8A3B7D0014AF2F /* LMSGestureTypeC.h */,
+				4F78B6771C8A3B7D0014AF2F /* LMSGestureTypeC.m */,
+				4F78B6791C8A3B8A0014AF2F /* LMSGestureTypeD.h */,
+				4F78B67A1C8A3B8A0014AF2F /* LMSGestureTypeD.m */,
 			);
 			path = GestureCatcher;
 			sourceTree = "<group>";
@@ -137,6 +205,28 @@
 			path = GestureCatcherUITests;
 			sourceTree = "<group>";
 		};
+		4FCF3DFB1C5268F100DB7FE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FCF3E091C529B9300DB7FE8 /* libLeap.dylib */,
+				4FCF3DF91C5268D700DB7FE8 /* Foundation.framework */,
+				4FCF3DF71C5268CE00DB7FE8 /* AppKit.framework */,
+				4FCF3DF51C5268C500DB7FE8 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4FCF3E011C529A2600DB7FE8 /* LeapMotion */ = {
+			isa = PBXGroup;
+			children = (
+				4FCF3E021C529A4100DB7FE8 /* Leap.h */,
+				4FCF3E031C529A4100DB7FE8 /* LeapMath.h */,
+				4FCF3E041C529A4100DB7FE8 /* LeapObjectiveC.h */,
+				4FCF3E051C529A4100DB7FE8 /* LeapObjectiveC.mm */,
+			);
+			name = LeapMotion;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +237,7 @@
 				4FCF3DBC1C52688900DB7FE8 /* Sources */,
 				4FCF3DBD1C52688900DB7FE8 /* Frameworks */,
 				4FCF3DBE1C52688900DB7FE8 /* Resources */,
+				4FCF3E0C1C52A27D00DB7FE8 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -199,7 +290,7 @@
 		4FCF3DB81C52688900DB7FE8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Stony Wang";
 				TargetAttributes = {
 					4FCF3DBF1C52688900DB7FE8 = {
@@ -266,9 +357,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F78B67B1C8A3B8A0014AF2F /* LMSGestureTypeD.m in Sources */,
+				4F78B6781C8A3B7D0014AF2F /* LMSGestureTypeC.m in Sources */,
+				4F78B6721C89D0450014AF2F /* LMSConst.m in Sources */,
 				4FCF3DCB1C52688900DB7FE8 /* ViewController.m in Sources */,
+				4F78B6751C8A2D300014AF2F /* LMSGestureTypeB.m in Sources */,
 				4FCF3DC81C52688900DB7FE8 /* main.m in Sources */,
+				4FCF3E061C529A4100DB7FE8 /* LeapObjectiveC.mm in Sources */,
 				4FCF3DC51C52688900DB7FE8 /* AppDelegate.m in Sources */,
+				4F78B66F1C89CF300014AF2F /* LMSGestureTypeA.m in Sources */,
+				4F78B66C1C89CCDB0014AF2F /* LMSGesture.m in Sources */,
+				4FCF3E001C52696F00DB7FE8 /* MotionController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,11 +497,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = GestureCatcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/LeapMotion",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = name.stony.GestureCatcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -410,11 +516,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = GestureCatcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/LeapMotion",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = name.stony.GestureCatcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
@@ -489,6 +602,7 @@
 				4FCF3DEC1C52688900DB7FE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4FCF3DED1C52688900DB7FE8 /* Build configuration list for PBXNativeTarget "GestureCatcherTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +611,7 @@
 				4FCF3DEF1C52688900DB7FE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4FCF3DF01C52688900DB7FE8 /* Build configuration list for PBXNativeTarget "GestureCatcherUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +620,7 @@
 				4FCF3DF21C52688900DB7FE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
