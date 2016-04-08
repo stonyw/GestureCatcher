@@ -29,12 +29,13 @@ typedef NS_ENUM(NSUInteger, LMSGestureStatus) {
 @interface LMSGesture : NSObject
 
 @property (nonatomic, copy)   NSString                *name;
+@property (nonatomic, copy)   NSString                *shortName;
 @property (nonatomic, assign) LMSGestureStatus         status;
 @property (nonatomic, weak)   id<LMSGestureDelegate>   delegate;
 @property (nonatomic, assign) BOOL                     enable;
 @property (nonatomic, assign) BOOL                     log;
 
-- (id)initWithGestureName:(NSString*)name withDelegate:(id<LMSGestureDelegate>)delegate;
+- (id)initWithGestureName:(NSString*)name withShortName:(NSString*)shortName withDelegate:(id<LMSGestureDelegate>)delegate;
 - (BOOL)onMotionGesture:(LeapController *)controller;
 - (BOOL)matchStart:(LeapFrame*)frame;
 - (BOOL)matchEnd:(LeapFrame*)frame;

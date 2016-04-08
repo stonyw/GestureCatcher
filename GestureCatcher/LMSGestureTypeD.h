@@ -10,6 +10,6 @@
 
 @interface LMSGestureTypeD : LMSGesture
 
-- (id)initWithGestureName:(NSString*)name withDelegate:(id<LMSGestureDelegate>)delegate;
+- (id)initWithGestureName:(NSString*)name withShortName:(NSString*)shortName withDelegate:(id<LMSGestureDelegate>)delegate;
 
 @end

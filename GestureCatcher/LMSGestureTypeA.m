@@ -12,8 +12,8 @@
 
 @implementation LMSGestureTypeA
 
-- (id)initWithGestureName:(NSString*)name withDelegate:(id<LMSGestureDelegate>)delegate {
-    if (self == [super initWithGestureName:name withDelegate:delegate]) {
+- (id)initWithGestureName:(NSString*)name withShortName:(NSString*)shortName withDelegate:(id<LMSGestureDelegate>)delegate {
+    if (self == [super initWithGestureName:name withShortName:(NSString*)shortName withDelegate:delegate]) {
         self.fingerStatus = [[NSMutableArray alloc] initWithArray:@[@0, @3, @0, @3, @0]];
         _lastFingersStatus = @[@0, @3, @0, @3, @0];
     }
@@ -147,9 +147,9 @@
         NSLog(@"matchStart:");
     }
     for (LeapHand *hand in frame.hands) {
-        if (!hand.isLeft) {
-            continue;
-        }
+//        if (!hand.isLeft) {
+//            continue;
+//        }
         
         for (LeapFinger *finger in hand.fingers) {
             switch (finger.type) {
@@ -219,7 +219,7 @@
     }
     if (angle < LEAP_PI * 0.65 && angle > 0) {
         if (self.log) {
-            NSLog(@"  [%@]: %@ 手势就位", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type]);
+            NSLog(@"  [%@]: %@ finger gesture is ready", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type]);
         }
         return YES;
     }
@@ -231,7 +231,7 @@
     float angle = [direction angleTo:bone.direction];
     if (angle < LEAP_PI * 0.65 && angle > 0) {
         if (self.log) {
-            NSLog(@"   [%@]: %@ 手势开始", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type]);
+            NSLog(@"   [%@]: %@ finger gesture starts", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type]);
         }
         return YES;
     }
@@ -243,7 +243,7 @@
     float angle = [direction angleTo:bone.direction];
     if (angle < LEAP_PI && angle > LEAP_PI * 0.65) {
         if (self.log) {
-            NSLog(@"   [%@]: %@ 手势结束", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type]);
+            NSLog(@"   [%@]: %@ finger gesture ends", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type]);
         }
         return YES;
     }
@@ -255,7 +255,7 @@
     float angle = [direction angleTo:bone.direction];
     if (angle < LEAP_PI * 0.5 && angle > 0) {
         if (self.log) {
-            NSLog(@"   [%@]: %@ 手势就位", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type]);
+            NSLog(@"   [%@]: %@ finger gesture is ready", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type]);
         }
         return YES;
     }

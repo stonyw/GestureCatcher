@@ -16,7 +16,8 @@
 
 @property (nonatomic, strong) MotionController   *leapMotion;
 
-@property (unsafe_unretained) IBOutlet NSTextView *textView;
+@property (nonatomic, unsafe_unretained) IBOutlet NSTextView *textView;
+@property (nonatomic, unsafe_unretained) IBOutlet NSTextField *serverField;
 
 - (IBAction)clickStart:(id)sender;
 

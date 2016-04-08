@@ -7,14 +7,18 @@
 //
 
 #import "ViewController.h"
+#import <AFNetworking/AFNetworking.h>
 #import "LMSConst.h"
 #import "LMSGestureTypeA.h"
 #import "LMSGestureTypeB.h"
 #import "LMSGestureTypeC.h"
+#import "LMSGestureTypeD.h"
 
 @interface ViewController ()
 
-@property (nonatomic, strong) NSArray*    gestures;
+@property (nonatomic, strong) NSArray          *gestures;
+@property (nonatomic, strong) NSURL            *server;
+@property (nonatomic, strong) NSDateFormatter  *formatter;
 
 @end
 
@@ -28,16 +32,22 @@
     
     self.leapMotion = [[MotionController alloc] init];
     
+    self.formatter = [[NSDateFormatter alloc] init];
+    [self.formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];
+    
     NSMutableArray *array = [NSMutableArray array];
-    LMSGesture *gestureA =[[LMSGestureTypeA alloc] initWithGestureName:@"Type A" withDelegate:self];
+    LMSGesture *gestureA = [[LMSGestureTypeA alloc] initWithGestureName:@"Type A" withShortName:@"a" withDelegate:self];
     gestureA.log = NO;
     [array addObject:gestureA];
-    LMSGesture *gestureB = [[LMSGestureTypeB alloc] initWithGestureName:@"Type B" withDelegate:self];
+    LMSGesture *gestureB = [[LMSGestureTypeB alloc] initWithGestureName:@"Type B" withShortName:@"b" withDelegate:self];
     gestureB.log = NO;
     [array addObject:gestureB];
-    LMSGesture *gestureC = [[LMSGestureTypeC alloc] initWithGestureName:@"Type C" withDelegate:self];
-    gestureC.log = YES;
+    LMSGesture *gestureC = [[LMSGestureTypeC alloc] initWithGestureName:@"Type C" withShortName:@"c" withDelegate:self];
+    gestureC.log = NO;
     [array addObject:gestureC];
+    LMSGesture *gestureD = [[LMSGestureTypeD alloc] initWithGestureName:@"Type D" withShortName:@"d" withDelegate:self];
+    gestureD.log = YES;
+    [array addObject:gestureD];
     
     self.gestures = [array copy];
     
@@ -53,6 +63,8 @@
 
 - (IBAction)clickStart:(id)sender {
     [self.leapMotion startWithDelegate:self];
+    
+    self.server = [NSURL URLWithString:self.serverField.cell.title];
 }
 
 - (IBAction)clickStop:(id)sender {
@@ -83,13 +95,24 @@
     
     
     const NSString *name = gesture.name;
+    NSURL *url = [NSURL URLWithString:gesture.shortName relativeToURL:self.server];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    // manager.responseSerializer = [AFHTTPResponseSerializer serializer]; // for HTTP text/html body parser
+    [manager GET:url.absoluteString parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        NSLog(@"Send %@ successfully", name);
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Failed to send %@ for %@", name, error);
+    }];
+    
     dispatch_async(dispatch_get_main_queue(), ^(void) {
         NSMutableString *string = [NSMutableString string];
-        [_gestureFiredList addObject:[NSString stringWithFormat:@"%@ is fired.\n", name]];
+        [_gestureFiredList addObject:[NSString stringWithFormat:@"%@ %@ is fired.\n", [self.formatter stringFromDate:[NSDate date]], name]];
         for (NSString *s in _gestureFiredList) {
             [string appendString:s];
         }
         [self.textView setString:string];
+        [self.textView scrollRangeToVisible:NSMakeRange(string.length - 1, 1)];
+        
     });
     
     [gesture resetStatus];

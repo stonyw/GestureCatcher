@@ -17,8 +17,8 @@
 
 @implementation LMSGestureTypeC
 
-- (id)initWithGestureName:(NSString*)name withDelegate:(id<LMSGestureDelegate>)delegate {
-    if (self == [super initWithGestureName:name withDelegate:delegate]) {
+- (id)initWithGestureName:(NSString*)name withShortName:(NSString*)shortName withDelegate:(id<LMSGestureDelegate>)delegate {
+    if (self == [super initWithGestureName:name withShortName:(NSString*)shortName withDelegate:delegate]) {
         self.startDistance = 80;
         self.minDistance = 40;
         self.endDistance = 60;

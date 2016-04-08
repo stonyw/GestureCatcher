@@ -18,8 +18,8 @@
 
 @implementation LMSGestureTypeB
 
-- (id)initWithGestureName:(NSString*)name withDelegate:(id<LMSGestureDelegate>)delegate {
-    if (self == [super initWithGestureName:name withDelegate:delegate]) {
+- (id)initWithGestureName:(NSString*)name withShortName:(NSString*)shortName withDelegate:(id<LMSGestureDelegate>)delegate {
+    if (self == [super initWithGestureName:name withShortName:(NSString*)shortName withDelegate:delegate]) {
         
     }
     return self;
