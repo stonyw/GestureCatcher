@@ -674,7 +674,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1Cm-Af-236">
-                                <rect key="frame" x="24" y="232" width="70" height="32"/>
+                                <rect key="frame" x="194" y="232" width="70" height="32"/>
                                 <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oai-hM-Hf4">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -711,8 +711,29 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BgA-zf-j8U">
+                                <rect key="frame" x="10" y="238" width="180" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="P49-Tx-tmS"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="http://192.168.0.233/" placeholderString="URL like http://192.168.0.233/" drawsBackground="YES" id="Vqc-Ab-4kC">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Boq-SS-amb">
+                                <rect key="frame" x="324" y="232" width="81" height="32"/>
+                                <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zzn-2a-b2C">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="clickClear:" target="XfG-lQ-9wD" id="eeT-Gb-JkZ"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q3N-xf-6M4">
-                                <rect key="frame" x="387" y="232" width="69" height="32"/>
+                                <rect key="frame" x="262" y="232" width="69" height="32"/>
                                 <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Y69-9e-i4u">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -721,33 +742,26 @@
                                     <action selector="clickStop:" target="XfG-lQ-9wD" id="pjk-Dp-U5U"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BgA-zf-j8U">
-                                <rect key="frame" x="102" y="237" width="140" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="P49-Tx-tmS"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="http://192.168.0.233/" placeholderString="URL like http://192.168.0.233/" drawsBackground="YES" id="Vqc-Ab-4kC">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="BgA-zf-j8U" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="11" id="46N-GH-fV4"/>
+                            <constraint firstItem="BgA-zf-j8U" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="46N-GH-fV4"/>
                             <constraint firstItem="S74-Hu-JGd" firstAttribute="top" secondItem="Q3N-xf-6M4" secondAttribute="bottom" constant="10" id="5h8-ef-OCK"/>
                             <constraint firstItem="S74-Hu-JGd" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="10" id="Flk-tK-ksk"/>
+                            <constraint firstItem="Boq-SS-amb" firstAttribute="leading" secondItem="Q3N-xf-6M4" secondAttribute="trailing" constant="5" id="Fu5-8T-olU"/>
                             <constraint firstAttribute="bottom" secondItem="S74-Hu-JGd" secondAttribute="bottom" constant="10" id="Jgb-B7-ghC"/>
-                            <constraint firstItem="1Cm-Af-236" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="30" id="NCD-L1-9eF"/>
-                            <constraint firstItem="BgA-zf-j8U" firstAttribute="leading" secondItem="1Cm-Af-236" secondAttribute="trailing" constant="14" id="QQg-Pz-enc"/>
+                            <constraint firstItem="BgA-zf-j8U" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="10" id="Pya-WT-daB"/>
+                            <constraint firstItem="Q3N-xf-6M4" firstAttribute="leading" secondItem="1Cm-Af-236" secondAttribute="trailing" constant="10" id="cXI-Yz-Q2J"/>
+                            <constraint firstItem="Boq-SS-amb" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="fwP-pb-eAC"/>
                             <constraint firstAttribute="trailing" secondItem="S74-Hu-JGd" secondAttribute="trailing" constant="10" id="hvD-2B-jzg"/>
-                            <constraint firstAttribute="trailing" secondItem="Q3N-xf-6M4" secondAttribute="trailing" constant="30" id="loH-ac-ccC"/>
+                            <constraint firstItem="1Cm-Af-236" firstAttribute="leading" secondItem="BgA-zf-j8U" secondAttribute="trailing" constant="10" id="lB8-0Y-0ra"/>
                             <constraint firstItem="1Cm-Af-236" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="pmW-7O-gDB"/>
                             <constraint firstItem="Q3N-xf-6M4" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="wfa-dE-gBW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="serverField" destination="BgA-zf-j8U" id="YAW-ZR-5kT"/>
+                        <outlet property="startBtn" destination="1Cm-Af-236" id="ped-7C-RKK"/>
+                        <outlet property="stopBtn" destination="Q3N-xf-6M4" id="vEg-0n-jd9"/>
                         <outlet property="textView" destination="liy-yZ-1UP" id="YnH-na-Ekn"/>
                     </connections>
                 </viewController>

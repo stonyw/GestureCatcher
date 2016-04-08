@@ -29,6 +29,8 @@
     [super viewDidLoad];
 
     // Do any additional setup after loading the view.
+    self.startBtn.enabled = YES;
+    self.stopBtn.enabled = NO;
     
     self.leapMotion = [[MotionController alloc] init];
     
@@ -37,7 +39,7 @@
     
     NSMutableArray *array = [NSMutableArray array];
     LMSGesture *gestureA = [[LMSGestureTypeA alloc] initWithGestureName:@"Type A" withShortName:@"a" withDelegate:self];
-    gestureA.log = NO;
+    gestureA.log = YES;
     [array addObject:gestureA];
     LMSGesture *gestureB = [[LMSGestureTypeB alloc] initWithGestureName:@"Type B" withShortName:@"b" withDelegate:self];
     gestureB.log = NO;
@@ -46,11 +48,10 @@
     gestureC.log = NO;
     [array addObject:gestureC];
     LMSGesture *gestureD = [[LMSGestureTypeD alloc] initWithGestureName:@"Type D" withShortName:@"d" withDelegate:self];
-    gestureD.log = YES;
+    gestureD.log = NO;
     [array addObject:gestureD];
     
     self.gestures = [array copy];
-    
     
     _gestureFiredList = [NSMutableArray array];
 }
@@ -62,33 +63,47 @@
 }
 
 - (IBAction)clickStart:(id)sender {
-    [self.leapMotion startWithDelegate:self];
+    if (!self.server) {
+        self.server = [NSURL URLWithString:self.serverField.cell.title];
+        self.startBtn.enabled = NO;
+        self.stopBtn.enabled = YES;
     
-    self.server = [NSURL URLWithString:self.serverField.cell.title];
+        [self.leapMotion startWithDelegate:self];
+    }
 }
 
 - (IBAction)clickStop:(id)sender {
-    [self.leapMotion stop];
+    if (self.server) {
+        self.server = nil;
+        self.startBtn.enabled = YES;
+        self.stopBtn.enabled = NO;
+        [self.leapMotion stop];
+    }
 }
 
-- (void)showFingerStatus:(NSArray *)status {
-    NSMutableString *string = [NSMutableString string];
-    for (NSUInteger i = 0; i < status.count; i++) {
-        NSNumber * s = status[i];
-        [string appendFormat:@"%@: %@ (%@)\n",  [LMSConst FingerNames][i], [LMSConst FingerStatusNames][s.intValue], s];
-    }
-    
-//    if (fired) {
-//        [_gestureFiredList addObject:[NSString stringWithFormat:@"%@ Gesture 2 is fired!\n", [[NSDate date] description]]];
-//    }
-    
-    
-    for (NSString *s in _gestureFiredList) {
-        [string appendString:s];
-    }
-    
-    [self.textView setString:string];
+- (IBAction)clickClear:(id)sender {
+    [_gestureFiredList removeAllObjects];
+    [self.textView setString:@""];
 }
+
+//- (void)showFingerStatus:(NSArray *)status {
+//    NSMutableString *string = [NSMutableString string];
+//    for (NSUInteger i = 0; i < status.count; i++) {
+//        NSNumber * s = status[i];
+//        [string appendFormat:@"%@: %@ (%@)\n",  [LMSConst FingerNames][i], [LMSConst FingerStatusNames][s.intValue], s];
+//    }
+//    
+////    if (fired) {
+////        [_gestureFiredList addObject:[NSString stringWithFormat:@"%@ Gesture 2 is fired!\n", [[NSDate date] description]]];
+////    }
+//    
+//    
+//    for (NSString *s in _gestureFiredList) {
+//        [string appendString:s];
+//    }
+//    
+//    [self.textView setString:string];
+//}
 
 #pragma mark -- LMSGestureDelegate
 - (void)onGestureEvent:(LeapController *)controller withGesture:(LMSGesture*)gesture {
