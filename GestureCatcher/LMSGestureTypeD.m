@@ -87,12 +87,10 @@
 
 - (BOOL)matchThumbFingerStart:(LeapFinger*)finger withHand:(LeapHand*)hand {
     LeapBone *bone = [finger bone:LEAP_BONE_TYPE_DISTAL];
-    float distance = [hand.palmPosition distanceTo:bone.direction];
+    float distance = [hand.palmPosition distanceTo:bone.center];
     float angle = [hand.direction angleTo:bone.direction];
-    if (self.log) {
-        //        NSLog(@"  [%@]: %@ %f in [%f..%f]", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type], angle, 0.0, PI * 0.75);
-    }
-    if ((distance < 125 && distance > 115)&& (angle > 2.2f && angle < 2.6f)) {
+    
+    if ((distance > 65 && distance < 90)&& (angle > 2.2f && angle < 2.6f)) {
         if (self.log) {
             NSLog(@"  [%@]: %@ finger gesture is ready (%f, %f)", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type], distance, angle);
         }
@@ -103,12 +101,10 @@
 
 - (BOOL)matchThumbFingerEnd:(LeapFinger*)finger withHand:(LeapHand*)hand {
     LeapBone *bone = [finger bone:LEAP_BONE_TYPE_DISTAL];
-    float distance = [hand.palmPosition distanceTo:bone.direction];
+    float distance = [hand.palmPosition distanceTo:bone.center];
     float angle = [hand.direction angleTo:bone.direction];
-    if (self.log) {
-        //        NSLog(@"  [%@]: %@ %f in [%f..%f]", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type], angle, 0.0, PI * 0.75);
-    }
-    if (distance > 125 && (angle > 2.2f && angle < 2.6f)) {
+
+    if (distance < 65 && (angle > 2.2f && angle < 2.6f)) {
         if (self.log) {
             NSLog(@"  [%@]: %@ finger gesture is ready", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type]);
         }
@@ -121,9 +117,9 @@
     LeapBone *bone = [finger bone:LEAP_BONE_TYPE_DISTAL];
     float angle = [direction angleTo:bone.direction];
     if (angle < LEAP_PI * 0.15 && angle > 0) {
-//        if (self.log) {
-//            NSLog(@"   [%@]: %@ finger gesture is ready %f", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type], angle);
-//        }
+        if (self.log) {
+            NSLog(@"   [%@]: %@ finger gesture is ready %f", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type], angle);
+        }
         return YES;
     }
     return NO;
@@ -133,9 +129,9 @@
     LeapBone *bone = [finger bone:LEAP_BONE_TYPE_DISTAL];
     float angle = [direction angleTo:bone.direction];
     if (angle < LEAP_PI * 0.15 && angle > 0) {
-//        if (self.log) {
-//            NSLog(@"   [%@]: %@ finger gesture is ready", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type]);
-//        }
+        if (self.log) {
+            NSLog(@"   [%@]: %@ finger gesture is ready", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type]);
+        }
         return YES;
     }
     return NO;

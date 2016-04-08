@@ -217,7 +217,7 @@
     if (self.log) {
 //        NSLog(@"  [%@]: %@ %f in [%f..%f]", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type], angle, 0.0, PI * 0.75);
     }
-    if (angle < LEAP_PI * 0.65 && angle > 0) {
+    if (angle < LEAP_PI * 0.75 && angle > 0) {
         if (self.log) {
             NSLog(@"  [%@]: %@ finger gesture is ready", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type]);
         }
@@ -229,7 +229,7 @@
 - (BOOL)matchMiddleFingerStart:(LeapFinger*)finger withHandDirection:(LeapVector*)direction {
     LeapBone *bone = [finger bone:LEAP_BONE_TYPE_DISTAL];
     float angle = [direction angleTo:bone.direction];
-    if (angle < LEAP_PI * 0.65 && angle > 0) {
+    if (angle < LEAP_PI * 0.6 && angle > 0) {
         if (self.log) {
             NSLog(@"   [%@]: %@ finger gesture starts", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type]);
         }
@@ -241,7 +241,7 @@
 - (BOOL)matchMiddleFingerEnd:(LeapFinger*)finger withHandDirection:(LeapVector*)direction {
     LeapBone *bone = [finger bone:LEAP_BONE_TYPE_DISTAL];
     float angle = [direction angleTo:bone.direction];
-    if (angle < LEAP_PI && angle > LEAP_PI * 0.65) {
+    if (angle < LEAP_PI && angle > LEAP_PI * 0.6) {
         if (self.log) {
             NSLog(@"   [%@]: %@ finger gesture ends", self.name, [[LMSConst FingerNames] objectAtIndex:finger.type]);
         }
