@@ -674,7 +674,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1Cm-Af-236">
-                                <rect key="frame" x="194" y="232" width="70" height="32"/>
+                                <rect key="frame" x="194" y="231" width="70" height="32"/>
                                 <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oai-hM-Hf4">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -684,19 +684,19 @@
                                 </connections>
                             </button>
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S74-Hu-JGd">
-                                <rect key="frame" x="10" y="10" width="460" height="219"/>
+                                <rect key="frame" x="10" y="10" width="460" height="187"/>
                                 <clipView key="contentView" id="liB-xk-4b0">
-                                    <rect key="frame" x="1" y="1" width="458" height="217"/>
+                                    <rect key="frame" x="1" y="1" width="458" height="185"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="liy-yZ-1UP">
-                                            <rect key="frame" x="0.0" y="0.0" width="458" height="217"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="458" height="185"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="458" height="217"/>
+                                            <size key="minSize" width="458" height="185"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="458" height="217"/>
+                                            <size key="minSize" width="458" height="185"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                         </textView>
                                     </subviews>
@@ -707,7 +707,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="1dU-3Y-x4y">
-                                    <rect key="frame" x="443" y="1" width="16" height="217"/>
+                                    <rect key="frame" x="443" y="1" width="16" height="185"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -722,8 +722,8 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Boq-SS-amb">
-                                <rect key="frame" x="324" y="232" width="81" height="32"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Boq-SS-amb">
+                                <rect key="frame" x="324" y="231" width="72" height="32"/>
                                 <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zzn-2a-b2C">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -733,7 +733,7 @@
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q3N-xf-6M4">
-                                <rect key="frame" x="262" y="232" width="69" height="32"/>
+                                <rect key="frame" x="262" y="231" width="69" height="32"/>
                                 <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Y69-9e-i4u">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -742,23 +742,103 @@
                                     <action selector="clickStop:" target="XfG-lQ-9wD" id="pjk-Dp-U5U"/>
                                 </connections>
                             </button>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Hwc-II-gte">
+                                <rect key="frame" x="8" y="204" width="95" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="xWs-2T-IOZ"/>
+                                </constraints>
+                                <popUpButtonCell key="cell" type="push" title="Enable A" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1" imageScaling="proportionallyDown" inset="2" selectedItem="2fo-lx-7Fe" id="dUI-A9-Y6L">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="JEA-Z9-ZH6">
+                                        <items>
+                                            <menuItem title="Enable A" state="on" tag="1" id="2fo-lx-7Fe"/>
+                                            <menuItem title="Log A" tag="3" id="pWk-uI-xVJ"/>
+                                            <menuItem title="Disable" id="X6k-fw-FJf"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ehA-tU-RcP">
+                                <rect key="frame" x="108" y="204" width="95" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="ngN-Cy-ZLd"/>
+                                </constraints>
+                                <popUpButtonCell key="cell" type="push" title="Enable B" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1" imageScaling="proportionallyDown" inset="2" selectedItem="wRE-Tm-bnQ" id="tUG-qL-EUt">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="j4Q-c4-f04">
+                                        <items>
+                                            <menuItem title="Enable B" state="on" tag="1" id="wRE-Tm-bnQ"/>
+                                            <menuItem title="Log B" tag="3" id="sIs-zg-Pa6"/>
+                                            <menuItem title="Disable" id="chE-IB-inE"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uod-Wx-GAw">
+                                <rect key="frame" x="208" y="204" width="95" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="SCi-cs-1WR"/>
+                                </constraints>
+                                <popUpButtonCell key="cell" type="push" title="Enable C" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1" imageScaling="proportionallyDown" inset="2" selectedItem="yLP-w3-n8Q" id="uMg-F3-Rm6">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="t8f-cj-UGs">
+                                        <items>
+                                            <menuItem title="Enable C" state="on" tag="1" id="yLP-w3-n8Q"/>
+                                            <menuItem title="Log C" tag="3" id="0UX-8Q-AyS"/>
+                                            <menuItem title="Disable" id="zLb-g1-jI9"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8XT-iy-6c1">
+                                <rect key="frame" x="308" y="204" width="95" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="Iul-DB-iEN"/>
+                                </constraints>
+                                <popUpButtonCell key="cell" type="push" title="Enable D" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1" imageScaling="proportionallyDown" inset="2" selectedItem="xgO-VG-dNS" id="dHA-dJ-ixw">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="nEI-Sj-4Tv">
+                                        <items>
+                                            <menuItem title="Enable D" state="on" tag="1" id="xgO-VG-dNS"/>
+                                            <menuItem title="Log D" tag="3" id="Hjd-6g-a6z"/>
+                                            <menuItem title="Disable" id="qT4-kF-gRL"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="Q3N-xf-6M4" firstAttribute="baseline" secondItem="BgA-zf-j8U" secondAttribute="baseline" id="0Rx-rs-9oc"/>
                             <constraint firstItem="BgA-zf-j8U" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="46N-GH-fV4"/>
-                            <constraint firstItem="S74-Hu-JGd" firstAttribute="top" secondItem="Q3N-xf-6M4" secondAttribute="bottom" constant="10" id="5h8-ef-OCK"/>
                             <constraint firstItem="S74-Hu-JGd" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="10" id="Flk-tK-ksk"/>
                             <constraint firstItem="Boq-SS-amb" firstAttribute="leading" secondItem="Q3N-xf-6M4" secondAttribute="trailing" constant="5" id="Fu5-8T-olU"/>
+                            <constraint firstItem="Boq-SS-amb" firstAttribute="baseline" secondItem="BgA-zf-j8U" secondAttribute="baseline" id="I4m-Yg-xeO"/>
                             <constraint firstAttribute="bottom" secondItem="S74-Hu-JGd" secondAttribute="bottom" constant="10" id="Jgb-B7-ghC"/>
+                            <constraint firstItem="uod-Wx-GAw" firstAttribute="baseline" secondItem="Hwc-II-gte" secondAttribute="baseline" id="LIo-Cb-0hb"/>
+                            <constraint firstItem="Hwc-II-gte" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="10" id="MTH-Ym-pkt"/>
+                            <constraint firstItem="Hwc-II-gte" firstAttribute="top" secondItem="BgA-zf-j8U" secondAttribute="bottom" constant="10" id="N1Z-lH-PYg"/>
+                            <constraint firstItem="1Cm-Af-236" firstAttribute="baseline" secondItem="BgA-zf-j8U" secondAttribute="baseline" id="OVH-KA-Eoa"/>
                             <constraint firstItem="BgA-zf-j8U" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="10" id="Pya-WT-daB"/>
+                            <constraint firstItem="ehA-tU-RcP" firstAttribute="leading" secondItem="Hwc-II-gte" secondAttribute="trailing" constant="10" id="RHf-S7-r0H"/>
+                            <constraint firstItem="uod-Wx-GAw" firstAttribute="leading" secondItem="ehA-tU-RcP" secondAttribute="trailing" constant="10" id="RPM-BS-dYZ"/>
+                            <constraint firstItem="ehA-tU-RcP" firstAttribute="baseline" secondItem="Hwc-II-gte" secondAttribute="baseline" id="SW1-QL-0UL"/>
+                            <constraint firstItem="S74-Hu-JGd" firstAttribute="top" secondItem="Hwc-II-gte" secondAttribute="bottom" constant="10" id="T8e-wG-3tx"/>
+                            <constraint firstItem="8XT-iy-6c1" firstAttribute="leading" secondItem="uod-Wx-GAw" secondAttribute="trailing" constant="10" id="Xrw-dc-wWL"/>
                             <constraint firstItem="Q3N-xf-6M4" firstAttribute="leading" secondItem="1Cm-Af-236" secondAttribute="trailing" constant="10" id="cXI-Yz-Q2J"/>
-                            <constraint firstItem="Boq-SS-amb" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="fwP-pb-eAC"/>
+                            <constraint firstItem="8XT-iy-6c1" firstAttribute="baseline" secondItem="Hwc-II-gte" secondAttribute="baseline" id="h2C-IH-Olh"/>
                             <constraint firstAttribute="trailing" secondItem="S74-Hu-JGd" secondAttribute="trailing" constant="10" id="hvD-2B-jzg"/>
                             <constraint firstItem="1Cm-Af-236" firstAttribute="leading" secondItem="BgA-zf-j8U" secondAttribute="trailing" constant="10" id="lB8-0Y-0ra"/>
-                            <constraint firstItem="1Cm-Af-236" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="pmW-7O-gDB"/>
-                            <constraint firstItem="Q3N-xf-6M4" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="wfa-dE-gBW"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="popupBtnA" destination="Hwc-II-gte" id="tK2-tY-P5I"/>
+                        <outlet property="popupBtnB" destination="ehA-tU-RcP" id="TTc-v5-2f8"/>
+                        <outlet property="popupBtnC" destination="uod-Wx-GAw" id="V8t-We-7sq"/>
+                        <outlet property="popupBtnD" destination="8XT-iy-6c1" id="kgB-kv-mIQ"/>
                         <outlet property="serverField" destination="BgA-zf-j8U" id="YAW-ZR-5kT"/>
                         <outlet property="startBtn" destination="1Cm-Af-236" id="ped-7C-RKK"/>
                         <outlet property="stopBtn" destination="Q3N-xf-6M4" id="vEg-0n-jd9"/>

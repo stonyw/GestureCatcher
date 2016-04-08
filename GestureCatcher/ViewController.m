@@ -19,6 +19,18 @@
 @property (nonatomic, strong) NSArray          *gestures;
 @property (nonatomic, strong) NSURL            *server;
 @property (nonatomic, strong) NSDateFormatter  *formatter;
+@property (nonatomic, strong) NSArray          *popupBtns;
+
+@property (nonatomic, unsafe_unretained) IBOutlet NSTextView *textView;
+@property (nonatomic, unsafe_unretained) IBOutlet NSTextField *serverField;
+
+@property (nonatomic, unsafe_unretained) IBOutlet NSButton *startBtn;
+@property (nonatomic, unsafe_unretained) IBOutlet NSButton *stopBtn;
+
+@property (nonatomic, unsafe_unretained) IBOutlet NSPopUpButton *popupBtnA;
+@property (nonatomic, unsafe_unretained) IBOutlet NSPopUpButton *popupBtnB;
+@property (nonatomic, unsafe_unretained) IBOutlet NSPopUpButton *popupBtnC;
+@property (nonatomic, unsafe_unretained) IBOutlet NSPopUpButton *popupBtnD;
 
 @end
 
@@ -32,6 +44,8 @@
     self.startBtn.enabled = YES;
     self.stopBtn.enabled = NO;
     
+    self.popupBtns = @[self.popupBtnA, self.popupBtnB, self.popupBtnC, self.popupBtnD];
+    
     self.leapMotion = [[MotionController alloc] init];
     
     self.formatter = [[NSDateFormatter alloc] init];
@@ -39,7 +53,7 @@
     
     NSMutableArray *array = [NSMutableArray array];
     LMSGesture *gestureA = [[LMSGestureTypeA alloc] initWithGestureName:@"Type A" withShortName:@"a" withDelegate:self];
-    gestureA.log = YES;
+    gestureA.log = NO;
     [array addObject:gestureA];
     LMSGesture *gestureB = [[LMSGestureTypeB alloc] initWithGestureName:@"Type B" withShortName:@"b" withDelegate:self];
     gestureB.log = NO;
@@ -67,6 +81,22 @@
         self.server = [NSURL URLWithString:self.serverField.cell.title];
         self.startBtn.enabled = NO;
         self.stopBtn.enabled = YES;
+        
+        for (NSInteger i = 0; i < 4; ++i) {
+            LMSGesture * g = [self.gestures objectAtIndex:i];
+            NSPopUpButton * btn = [self.popupBtns objectAtIndex:i];
+            NSInteger tag = [btn selectedItem].tag;
+            if (tag > 0) {
+                g.enable = YES;
+                if (tag == 3) {
+                    g.log = YES;
+                } else {
+                    g.log = NO;
+                }
+            } else {
+                g.enable = NO;
+            }
+        }
     
         [self.leapMotion startWithDelegate:self];
     }
@@ -229,7 +259,7 @@
 - (void)onFrame:(LeapController *)controller {
 //    NSLog(@"New LeapFrame");
     for (LMSGesture * gesture in self.gestures) {
-        if (gesture) {
+        if (gesture && gesture.enable) {
             [gesture onMotionGesture:controller];
         }
     }

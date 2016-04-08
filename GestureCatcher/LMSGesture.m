@@ -44,10 +44,8 @@
                     NSLog(@"Finished");
                 }
                 self.status = LMSGestureStatusFinish;
-                if (self.enable) {
-                    if ([self.delegate respondsToSelector:@selector(onGestureEvent:withGesture:)]) {
-                        [self.delegate onGestureEvent:controller withGesture:self];
-                    }
+                if ([self.delegate respondsToSelector:@selector(onGestureEvent:withGesture:)]) {
+                    [self.delegate onGestureEvent:controller withGesture:self];
                 }
                 return YES;
             } else if ([self matchStart:frame]) {
